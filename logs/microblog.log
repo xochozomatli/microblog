@@ -53,3 +53,7 @@ Traceback (most recent call last):
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'follow' with values ['username']. Did you mean 'login' instead?
 2018-07-18 19:13:21,602 INFO: Microblog startup [in /home/xochozomatli/Documents/mycode/python/microblog/app/__init__.py:44]
+2018-07-19 01:36:10,729 INFO: Microblog startup [in /home/xochozomatli/Documents/mycode/python/microblog/app/__init__.py:44]
+2018-07-19 01:36:47,149 INFO: Microblog startup [in /home/xochozomatli/Documents/mycode/python/microblog/app/__init__.py:44]
+2018-07-19 01:37:50,015 INFO: Microblog startup [in /home/xochozomatli/Documents/mycode/python/microblog/app/__init__.py:44]
+2018-07-19 01:41:12,570 INFO: Microblog startup [in /home/xochozomatli/Documents/mycode/python/microblog/app/__init__.py:44]
