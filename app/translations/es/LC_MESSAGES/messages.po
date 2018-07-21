@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-20 19:02-0600\n"
+"POT-Creation-Date: 2018-07-21 01:55-0600\n"
 "PO-Revision-Date: 2018-07-20 19:04-0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -90,34 +90,34 @@ msgstr "¡Felicidades! Eres un usuario registrado."
 msgid "Your changes have been saved."
 msgstr "Tus cambios han sido guardados."
 
-#: app/routes.py:109 app/routes.py:124
+#: app/routes.py:110 app/routes.py:125
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Usuario %(username)s no se encontró."
 
-#: app/routes.py:112
+#: app/routes.py:113
 msgid "You cannot follow yourself!"
 msgstr "¡No puedes seguir a ti mismo!"
 
-#: app/routes.py:116
+#: app/routes.py:117
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "¡Estás siguiendo %(username)s!"
 
-#: app/routes.py:127
+#: app/routes.py:128
 msgid "You cannot unfollow yourself!"
 msgstr "¡No puedes dejar de seguir a ti mismo!"
 
-#: app/routes.py:131
+#: app/routes.py:132
 #, python-format
 msgid "You are no longer following %(username)s."
 msgstr "Ya no estás siguiendo a %(username)s."
 
-#: app/routes.py:156
+#: app/routes.py:157
 msgid "Check your email for the instructions to reset your password"
 msgstr "Revisa tu correo por las instruciones para cambiar tu contraseña"
 
-#: app/routes.py:171
+#: app/routes.py:172
 msgid "Your password has been reset."
 msgstr "Tu contraseña ha sido cambiado."
 
@@ -185,7 +185,7 @@ msgstr "Mensajes más viejos"
 
 #: app/templates/login.html:11
 msgid "New User? "
-msgstr "¿Usuario Nuevo?"
+msgstr "¿Usuario Nuevo? "
 
 #: app/templates/login.html:11
 msgid "Click to Register!"
@@ -236,3 +236,4 @@ msgstr "Seguir"
 #: app/templates/user.html:17
 msgid "Unfollow"
 msgstr "Deseguir"
+
