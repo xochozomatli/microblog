@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, url_for, request, g, \
-                jsonify
+                jsonify, current_app
 from flask_babel import _, get_locale
 from app import db
 from app.main.forms import EditProfileForm, PostForm, SearchForm
@@ -26,7 +26,7 @@ def index():
         flash(_('Your post is now live!'))
         return redirect(url_for('main.index'))
     page = request.args.get('page', 1, type=int)
-    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
+    posts = current_user.followed_posts().paginate(page, current_app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('main.index', page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('main.index', page=posts.prev_num) \
@@ -41,7 +41,7 @@ def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
     posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-        page, app.config['POSTS_PER_PAGE'], False)
+        page, current_app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('main.user', username=user.username, page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('main.user', username=user.username, page=posts.prev_num) \
@@ -107,7 +107,7 @@ def unfollow(username):
 def explore():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(
-        page, app.config['POSTS_PER_PAGE'], False)
+        page, current_app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('main.explore', page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('main.explore', page=posts.prev_num) \
